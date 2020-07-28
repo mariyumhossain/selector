@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import Shape from "./Shape"
 
+
 class Selector extends Component{
   constructor(){
     super()
     this.state = {
-      selectedShape: "square"
+      selectedShape: "square",
+      count:0
     }
   }
 
@@ -13,6 +15,13 @@ class Selector extends Component{
     this.setState({
        selectedShape: shapeName
        })
+       this.clickCount()
+  }
+
+  clickCount = () => {
+    this.setState({
+      count: this.state.count + 1
+    })
   }
 
   render(){
@@ -25,6 +34,9 @@ class Selector extends Component{
           <Shape shape="circle" selectShape={this.selectShape} selectedShape={this.state.selectedShape} /> 
           <Shape shape="square" selectShape={this.selectShape} selectedShape={this.state.selectedShape}/>
           <Shape shape="triangle" selectShape={this.selectShape} selectedShape={this.state.selectedShape}/>
+        </div>
+        <div className="footer">
+    <div> {this.state.count}</div>
         </div>
       </div>
     )

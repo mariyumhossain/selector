@@ -144,3 +144,14 @@ body {
     -ms-transform: rotate(-70deg);
     -o-transform: rotate(-70deg);
 }
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:cadetblue;
+  color: blue;
+  text-align: center;
+  height: 5%
+}
