@@ -7,7 +7,10 @@ class Selector extends Component{
     super()
     this.state = {
       selectedShape: "square",
-      count:0
+      count:0,
+      circle:0,
+      square:0,
+      triangle:0,
     }
   }
 
@@ -15,13 +18,17 @@ class Selector extends Component{
     this.setState({
        selectedShape: shapeName
        })
-       this.clickCount()
+      //  this.clickCount()
+      
+    this.state[shapeName]++
+    
   }
 
   clickCount = () => {
     this.setState({
       count: this.state.count + 1
     })
+    
   }
 
   render(){
@@ -36,7 +43,12 @@ class Selector extends Component{
           <Shape shape="triangle" selectShape={this.selectShape} selectedShape={this.state.selectedShape}/>
         </div>
         <div className="footer">
-    <div> {this.state.count}</div>
+          Circle Clicks:
+    <div> {this.state.circle}</div>
+          Square Clicks:
+    <div>{this.state.square}</div>
+          Triangle Clicks
+    <div>{this.state.triangle}</div>
         </div>
       </div>
     )

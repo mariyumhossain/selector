@@ -146,12 +146,18 @@ body {
 }
 
 .footer{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+  display:fixed;
+  bottom:0;
+  display:flex; 
   position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color:cadetblue;
-  color: blue;
+  color:black;
   text-align: center;
-  height: 5%
+  height: 10% 
 }
